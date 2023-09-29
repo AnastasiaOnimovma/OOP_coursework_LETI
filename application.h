@@ -13,8 +13,9 @@ public:
     TApplication();
     static TApplication& instance();
     int exec();
-    char menu();
     void process_errors(ErrorTypes);
+private:
+    char menu();
 };
 
 #endif // TAPPLICATION_H

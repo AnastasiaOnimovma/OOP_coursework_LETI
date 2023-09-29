@@ -122,8 +122,9 @@ std::ostream& operator<<(std::ostream& os,TPolinom& pol)
             {
                 os<<"+";
             }
-            os<<pol.c<<"\n";
+            os<<pol.c;
         }
+        std::cout<<"\n";
 
     }
     return os;

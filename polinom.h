@@ -19,7 +19,7 @@ public:
     void setPrintMode(EPrintMode);
     int setCoefficients();
     number value(number);
-    void TPolinom::roots();
+    void roots();
     friend std::ostream& operator<<(std::ostream&,TPolinom&);
 private:
     EPrintMode printMode;
