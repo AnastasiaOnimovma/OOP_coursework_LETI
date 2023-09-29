@@ -25,10 +25,12 @@ int TPolinom::setCoefficients()
     std::cout<<"a= ";
     if (!(std::cin>>a))
     {
+        a=1;
         return InvalidInput;
     }
     if (a==0)
     {
+        a=1;
         return NullA;
     }
      std::cout<<"b= ";
@@ -58,7 +60,7 @@ void TPolinom::roots()
     }
     else if (D==0)
     {
-        number x=(-b)/2/a;
+        number x=(-1)*b/2/a;
         std::cout<<"Root: x1,2= "<<x<<"\n";
     }
     else
@@ -90,7 +92,7 @@ std::ostream& operator<<(std::ostream& os,TPolinom& pol)
         }
         else
         {
-            if (pol.b==-1)
+            if (pol.a==-1)
             {
                 os<<"-";
             }
