@@ -68,11 +68,9 @@ bool TComplex::operator!=(TComplex complex) {
   return real != complex.real || imaginary != complex.imaginary;
 }
 
-bool TComplex::operator==(int lambda) { return length() == lambda; }
-bool TComplex::operator!=(int lambda) { return length() != lambda; }
+bool TComplex::operator==(int lambda) { return abs(*this) == lambda; }
+bool TComplex::operator!=(int lambda) { return abs(*this) != lambda; }
 
-bool TComplex::operator<(int lambda) { return length() < lambda; }
+bool TComplex::operator<(int lambda) { return abs(*this) < lambda; }
 
-bool TComplex::operator>(int lambda) { return length() > lambda; }
-
-double TComplex::length() { return sqrt(real * real + imaginary * imaginary); }
+bool TComplex::operator>(int lambda) { return abs(*this) > lambda; }
